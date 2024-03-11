@@ -13,25 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
+package omrecorder2;
 
-import java.io.File;
+import java.io.IOException;
 
 /**
- * Essential APIs for working with OmRecorder.
+ * A Recorder who can start and stop recording with startRecording() and stopRecording() method
+ * respectively.
  *
  * @author Kailash Dabhi
- * @date 31-07-2016
+ * @date 06-07-2016
  */
-public final class OmRecorder {
-  private OmRecorder() {
-  }
+public interface Recorder {
+  void startRecording();
 
-  public static Recorder pcm(PullTransport pullTransport, File file) {
-    return new Pcm(pullTransport, file);
-  }
+  void stopRecording() throws IOException;
 
-  public static Recorder wav(PullTransport pullTransport, File file) {
-    return new Wav(pullTransport, file);
+  void pauseRecording();
+
+  void resumeRecording();
+
+  /**
+   * Interface definition for a callback to be invoked when a silence is measured.
+   */
+  interface OnSilenceListener {
+    /**
+     * Called when a silence measured
+     *
+     * @param silenceTime The silence measured
+     */
+    void onSilence(long silenceTime);
   }
 }

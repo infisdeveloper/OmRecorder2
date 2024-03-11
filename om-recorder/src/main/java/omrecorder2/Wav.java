@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
+package omrecorder2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,20 +31,15 @@ final class Wav extends AbstractRecorder {
     super(pullTransport, file);
   }
 
-  @Override public void stopRecording() {
+  public void onStopRecording() {
     try {
-      super.stopRecording();
-      writeWavHeader();
+      final RandomAccessFile wavFile = randomAccessFile(file);
+      wavFile.seek(0); // to the beginning
+      wavFile.write(new WavHeader(pullTransport.pullableSource(), file.length()).toBytes());
+      wavFile.close();
     } catch (IOException e) {
       throw new RuntimeException("Error in applying wav header", e);
     }
-  }
-
-  private void writeWavHeader() throws IOException {
-    final RandomAccessFile wavFile = randomAccessFile(file);
-    wavFile.seek(0); // to the beginning
-    wavFile.write(new WavHeader(pullTransport.pullableSource(), file.length()).toBytes());
-    wavFile.close();
   }
 
   private RandomAccessFile randomAccessFile(File file) {

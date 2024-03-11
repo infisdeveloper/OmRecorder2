@@ -13,18 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
+package omrecorder2;
+
+import java.io.File;
 
 /**
- * A {@code ThreadAction} is an action which going to be executed on the implementer thread.
+ * Essential APIs for working with OmRecorder.
  *
  * @author Kailash Dabhi
- * @date 25-07-2016
+ * @date 31-07-2016
  */
-interface ThreadAction {
-  /**
-   * Execute {@code runnable} action on implementer {@code Thread}
-   */
-  void execute(Runnable action);
-}
+public final class OmRecorder {
+  private OmRecorder() {
+  }
 
+  public static Recorder pcm(PullTransport pullTransport, File file) {
+    return new Pcm(pullTransport, file);
+  }
+
+  public static Recorder wav(PullTransport pullTransport, File file) {
+    return new Wav(pullTransport, file);
+  }
+}
