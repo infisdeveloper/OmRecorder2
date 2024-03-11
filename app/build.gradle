@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-  buildToolsVersion '25.0.0'
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.kingbull.recorder"
         minSdkVersion 16
-        targetSdkVersion 19
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
@@ -22,12 +21,13 @@ android {
             abortOnError false
         }
     }
+
+    namespace = "com.kingbull.recorder"
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-//      compile project(':om-recorder')
-    compile 'com.kailashdabhi:om-recorder:1.1.5'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+    implementation project(':om-recorder')
 }

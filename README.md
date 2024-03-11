@@ -115,7 +115,7 @@ For documentation and additional information see [the website][1].
 
 Download
 --------
-    compile 'com.kailashdabhi:om-recorder:1.1.5'
+    implement 'com.kailashdabhi:om-recorder:1.1.5'
     
 
 Donations
