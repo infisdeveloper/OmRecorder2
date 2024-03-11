@@ -1,4 +1,4 @@
-package omrecorder;
+package omrecorder2;
 
 import android.media.AudioRecord;
 import android.os.Build;

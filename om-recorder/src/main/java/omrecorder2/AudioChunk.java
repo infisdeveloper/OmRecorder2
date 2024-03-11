@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
+package omrecorder2;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

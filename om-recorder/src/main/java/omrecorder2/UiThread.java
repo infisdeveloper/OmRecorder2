@@ -13,18 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
+package omrecorder2;
 
-import java.io.File;
+import android.os.Handler;
+import android.os.Looper;
 
 /**
- * {@code Pcm} is recorder for recording audio in wav format.
+ * A {@code UiThread} is representation of Ui / main thread.
  *
  * @author Kailash Dabhi
- * @date 31-07-2016
+ * @date 25-07-2016
  */
-final class Pcm extends AbstractRecorder {
-  public Pcm(PullTransport pullTransport, File file) {
-    super(pullTransport, file);
+final class UiThread implements ThreadAction {
+  private static final Handler handler = new Handler(Looper.getMainLooper());
+
+  /** executes the {@code Runnable} on UI Thread. */
+  @Override public void execute(Runnable runnable) {
+    handler.post(runnable);
   }
 }

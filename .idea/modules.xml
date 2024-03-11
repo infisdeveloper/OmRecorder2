@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OmRecorder2.iml" filepath="$PROJECT_DIR$/.idea/modules/OmRecorder2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OmRecorder2.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OmRecorder2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OmRecorder2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.iml" filepath="$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.main.iml" filepath="$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/om-recorder/OmRecorder2.om-recorder.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OmRecorder2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/OmRecorder2.test.iml" />
+    </modules>
+  </component>
+</project>

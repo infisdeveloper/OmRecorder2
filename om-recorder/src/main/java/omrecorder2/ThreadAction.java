@@ -13,35 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package omrecorder;
-
-import java.io.IOException;
+package omrecorder2;
 
 /**
- * A Recorder who can start and stop recording with startRecording() and stopRecording() method
- * respectively.
+ * A {@code ThreadAction} is an action which going to be executed on the implementer thread.
  *
  * @author Kailash Dabhi
- * @date 06-07-2016
+ * @date 25-07-2016
  */
-public interface Recorder {
-  void startRecording();
-
-  void stopRecording() throws IOException;
-
-  void pauseRecording();
-
-  void resumeRecording();
-
+interface ThreadAction {
   /**
-   * Interface definition for a callback to be invoked when a silence is measured.
+   * Execute {@code runnable} action on implementer {@code Thread}
    */
-  interface OnSilenceListener {
-    /**
-     * Called when a silence measured
-     *
-     * @param silenceTime The silence measured
-     */
-    void onSilence(long silenceTime);
-  }
+  void execute(Runnable action);
 }
+
